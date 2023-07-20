@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator BMI</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <div class="header">
+        <h1><b>BMI CLACULATOR</b></h1>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li class="gen"><a href="default.asp">Home</a></li>
+            <li class="gen"><a href="news.asp">News</a></li>
+            <li class="gen"><a href="contact.asp">Contact</a></li>
+            <li class="gen"><a href="about.asp">About</a></li>
+            <li class="prof"><a href="profile.asp">Profile</a></li>
+        </ul>
+    </div>
+    <div class="opening">
+        <p>
+            Berat badan yang ideal adalah impian semua orang. 
+            Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, namun badan yang ideal
+            juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? yukk, hitung sekarang
+            di <b>BMI Calculator</b>.
+        </p> 
+    </div>
+    <div class="counter">
+        <form>
+            <label for="Name"><b>Masukkan Nama Anda</b></label><br>
+            <input class="form" type="text" id="name" name="input"><br><br>
+
+            <label for="gender"><b>Plih Jenis Kelamin Anda</b></label>
+            <p><input class="man" type="radio" id="gender" name="gender" value="Pria">Pria</p>
+            <p><input class="women" type="radio" id="gender" name="gender" value="Wanita">Wanita</p>
+
+            <label for="weight"><b>Masukkan Berat Badan (Kg) Anda</b></label><br>
+            <input class="form" type="number" id="weight" name="input"><br><br>
+
+            <label for="Age"><b>Masukkan Usia (tahun) Anda</b></label><br>
+            <input class="form" type="number" id="Age" name="Age"><br><br>
+
+            <label for="height"><b>Masukkan Tinggi Badan (Cm) Anda</b></label><br>
+            <input class="form" type="number" id="height" name="input"><br><br>
+            <div>
+                <button class="result" onclick="counter_BMI()">Result</button>
+                <button class="clear">Reset</button>
+            </div>  
+        </form>
+    </div>
+    <div class="description">
+        <p class="main"><b>DESKRIPSI FITUR</b></p>
+        <p>
+            <ul>
+                <li>1. Menghitung Berat Badan</li>
+                <li>2. Menentukan kategori berat badan ideal atau tidak</li>
+                <li>3. Mempersiapkan program penurunan berat badan</li>
+            </ul>
+        </p>
+        <p>
+            Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak dianjurkan
+            menggunakan kalkulator BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain
+            berkonsultasi dengan profesional.
+        </p>
+        <p>
+            Kalkulator akan memberikan Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum.
+            Indeks Massa Tubuh/<i>Body Mass Index</i> (BMI) dihitung sebagai berat badan Anda (Kg) dibagi dengan
+            kuadrat tinggi badan Anda (m) BMI = Kg/m^2
+        </p>
+    </div>
+    <div class="Result-Box">
+        <table class="Result-Content">
+            <tr>
+                <td class="Result-Main">Hasil Perhitungan</td>
+            </tr>
+            <tr>
+                <td class="Result-Body"></td>
+            </tr>
+            <tr>
+                <td class="Result-Criteria"></td> 
+            </tr>
+            <tr>
+                <td class="Button-Share"><button>Share</button></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p id="deskripsi">
+            Jika Anda berada pada kriteria yang selain kriteria ideal,
+            maka anda di anjurkan untuk sampai pada kriteria ideal. karena
+            jika anda dalam kategori Underweight atau Overweight, maka selain
+            penampilan yang kurang menarik ada berbagai resiko kesehatan yang
+            memungkinkan terjadi. Dan Berikut merupakan beberapa penyakit yang
+            mungkin diderita oleh orang yang memiliki berat badan kurang ideal.
+        </p>
+    </div>
+    <div class="desease">
+        <table>
+            <tr>
+                <td><strong>KELEBIHAN BERAT BADAN</strong></td>
+                <td><strong>PENYAKIT KEKURANGAN BERAT BADAN</strong></td>
+            </tr><br>
+            <tr>
+                <td>1. Serangan Jantung</td>
+                <td>1. Penurunan Imunitas</td>
+            </tr><br><br><br>
+            <tr>
+                <td>2. Hipertensi</td>
+                <td>2. Osteoporosis</td>
+            </tr><br>
+            <tr>
+                <td>3. Diabetes</td>
+                <td>3. Masalah Kesuburan</td>
+            </tr><br>
+            <tr>
+                <td>4. Osteoarthritis</td>
+                <td>4. Keterlambatan perkembangan</td>
+            </tr>
+        </table>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
